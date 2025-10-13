@@ -4,12 +4,12 @@ A diverse collection of web development projects and components built with HTML,
 
 ## 📋 Table of Contents
 
-- [Projects](#projects)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [Projects]
+- [Technologies Used]
+- [Getting Started]
+- [Project Structure]
+- [Contributing]
+- [License]
 
 ## 🎯 Projects
 
