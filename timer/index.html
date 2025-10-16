@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon Timer</title>
+    <link rel="icon" href="Images/Tabicon.png" type="image/x-icon" />
+  </head>
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- -------------  CSS ---------------- -->
+
+  <style>
+    body {
+      width: 1000wh;
+      height: 100vh;
+      background: url(Images/Background.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 0 8%;
+      overflow-y: hidden;
+    }
+
+    .logo {
+      padding: 20px;
+      color: white;
+      font-size: 2rem;
+      font-family: "Poppins", sans-serif;
+    }
+
+    p {
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      margin-top: 10%;
+    }
+
+    h1 {
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 3rem;
+    }
+
+    span {
+      color: rgb(82, 255, 220);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .button {
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      padding: 12px;
+      background-color: rgba(255, 0, 0, 0);
+      border: 1px solid white;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .home-img {
+      width: 10%;
+      position: absolute;
+      right: 10%;
+      bottom: 0;
+      animation: home-img 4s linear infinite;
+    }
+
+    @keyframes home-img {
+      0% {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      100% {
+        bottom: 105%;
+        opacity: 1;
+      }
+    }
+
+    .lauch-time {
+      display: flex;
+    }
+
+    .lauch-time div {
+      flex-basis: 100px;
+    }
+  </style>
+
+  <!-- -------------  Html ---------------- -->
+
+  <body>
+    <div class="main-body">
+      <h2 class="logo">New Year 2026</h2>
+
+      <p>Website Under maintenance</p>
+
+      <h1>Happy <span> New Year </span>2026</h1>
+
+      <div class="lauch-time">
+        <div>
+          <p id="days">00</p>
+          <span>Days</span>
+        </div>
+
+        <div>
+          <p id="hours">00</p>
+          <span>Hours</span>
+        </div>
+
+        <div>
+          <p id="minutes">00</p>
+          <span>Minutes</span>
+        </div>
+
+        <div>
+          <p id="seconds">00</p>
+          <span>Seconds</span>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+
+      <a onclick="alert('Happy New Year 2026 🚀🥳')" class="button">
+        Click Here</a
+      >
+
+      <img src="Images/rocket.png" class="home-img" alt="rocket" />
+    </div>
+
+    <!-- -------------  JS ---------------- -->
+
+    <script>
+      var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+      }, 1000);
+    </script>
+  </body>
+</html>
