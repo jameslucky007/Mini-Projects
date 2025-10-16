@@ -13,32 +13,30 @@ A diverse collection of web development projects and components built with HTML,
 
 ## 🎯 Projects
 
-### 1. **Background Generator**
-Custom background patterns and gradient generators for web design.
-
-### 2. **Conform Box**
-Interactive form validation and styling component.
-
-### 3. **Counter**
-Simple increment/decrement counter application with custom styling.
-
-### 4. **Dashboard/Sidebar**
+### 1. **Dashboard/Sidebar**
 Responsive dashboard layout with collapsible sidebar navigation.
 
-### 5. **Nav Bar**
+### 2. **Drag & Drop**
+drag-and-drop interface help move list items between sections.
+
+### 3. **Nav Bar**
 Modern, responsive navigation bar with dropdown menus and mobile-friendly design.
 
-### 6. **QR Generator**
+### 4. **QR Generator**
 Generate QR codes instantly from text or URLs.
 
-### 7. **Accordion**
+### 5. **Conform Box**
+Interactive form validation and styling component.
+
+### 6. ** FAQ / Accordion**
 Expandable/collapsible accordion component for FAQs and content organization.
 
-### 8. **Authentication/Auth System**
-Complete authentication system with login, signup, and session management.
+### 7. **Password Generator**
+Simple Random Password Generator.
 
-### 9. **Contact Form**
-Responsive contact form with validation and submission handling.
+### 8. **Timer**
+It a conter page for upcommig project launches.
+
 
 ## 🛠️ Technologies Used
 
