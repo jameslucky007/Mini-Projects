@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drag & Drop Lists</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(2, 21, 72);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .left,
+      .right {
+        width: 300px;
+        min-height: 400px;
+        margin: 20px;
+        border: 2px dashed white;
+      }
+      .list {
+        background-color: rgb(89, 172, 244);
+        height: 60px;
+        margin: 30px;
+        color: white;
+        display: flex;
+        align-items: center;
+        cursor: grab;
+        border-radius: 5px;
+      }
+      .list img {
+        width: 40px;
+        margin: 0 6px;
+        -webkit-user-drag: none;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="list" draggable="true">
+          <img src="dots.svg" alt="icon" /> List Item 1
+        </div>
+        <div class="list" draggable="true">
+          <img src="dots.svg" alt="icon" /> List Item 2
+        </div>
+        <div class="list" draggable="true">
+          <img src="dots.svg" alt="icon" /> List Item 3
+        </div>
+        <div class="list" draggable="true">
+          <img src="dots.svg" alt="icon" /> List Item 4
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+
+    <script>
+        
+      let lists = document.getElementsByClassName("list");
+      let rightBox = document.getElementsByClassName("right")[0];
+      let leftBox = document.getElementsByClassName("left")[0];
+
+      let selected = null;
+
+      for (let list of lists) {
+        list.addEventListener("dragstart", function (e) {
+          selected = e.target;
+        });
+      }
+
+      rightBox.addEventListener("dragover", function (e) {
+        e.preventDefault();
+      });
+
+      rightBox.addEventListener("drop", function (e) {
+        rightBox.appendChild(selected);
+        selected = null;
+      });
+
+      leftBox.addEventListener("dragover", function (e) {
+        e.preventDefault();
+      });
+
+      leftBox.addEventListener("drop", function (e) {
+        leftBox.appendChild(selected);
+        selected = null;
+      });
+    </script>
+  </body>
 </html>
