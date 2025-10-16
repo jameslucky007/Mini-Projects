@@ -4,12 +4,11 @@ A diverse collection of web development projects and components built with HTML,
 
 ## 📋 Table of Contents
 
-- [Projects]
-- [Technologies Used]
-- [Getting Started]
-- [Project Structure]
-- [Contributing]
-- [License]
+- Projects
+- Technologies Used
+- Getting Started
+- Contributing
+- License
 
 ## 🎯 Projects
 
@@ -79,22 +78,6 @@ start index.html  # On Windows
 
 Each project is self-contained in its own folder. Simply navigate to the project folder and open the HTML file in your browser.
 
-## 📁 Project Structure
-
-```
-mini-projects/
-│
-├── Background/
-├── Conform-Box/
-├── Counter/
-├── Dashboard-sidebar/
-├── Nav-Bar/
-├── QR-Generator/
-├── accordion/
-├── authentication-auth-system/
-├── contact-foam/
-└── README.md
-```
 
 ## 🤝 Contributing
 
@@ -105,10 +88,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the Lucky
 
 ## 👤 Author
 
