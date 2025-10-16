@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Accordion / FAQ </title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- CSS code -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .title {
+      font-family: "Poppins", serif;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    .accordion-body {
+      margin: 5rem auto 0;
+      width: min(50%, 800px);
+    }
+
+    .title-section {
+      background-color: rgb(127, 187, 255);
+    }
+
+    .accordino-title h2 {
+      font-family: "Poppins", serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: white;
+      background-color: rgb(127, 187, 255);
+      border: 1px solid rgb(54, 54, 54);
+      padding: 10px;
+      transition: background-color 1s ease;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .accordino-title {
+      padding: 10px;
+    }
+
+    .accordino-title h2:hover {
+      background-color: rgb(84, 164, 255);
+    }
+
+    .accordino-content {
+      height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      background-color: rgb(235, 245, 255);
+      transition: height 0.3s ease;
+      font-family: "Poppins", serif;
+    }
+
+    .active .accordino-content {
+      height: auto;
+      padding: 15px;
+    }
+  </style>
+
+  <!-- Html Code -->
+  <body>
+    <div class="title-section">
+      <h1 class="title">Accordion & FAQ Section</h1>
+    </div>
+
+    <div class="accordion-body">
+      <div class="accordion-item">
+        <div class="accordino-title">
+          <h2>How To Use HTML</h2>
+        </div>
+        <div class="accordino-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+            voluptate aut deleniti, vero rerum esse molestias nobis aliquam.
+            Praesentium sint iure, saepe vero laborum iusto dolorem eligendi vel
+            magnam possimus?
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordino-title">
+          <h2>How To Use CSS</h2>
+        </div>
+        <div class="accordino-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+            voluptate aut deleniti, vero rerum esse molestias nobis aliquam.
+            Praesentium sint iure, saepe vero laborum iusto dolorem eligendi vel
+            magnam possimus?
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordino-title">
+          <h2>How To Use Bootstrap</h2>
+        </div>
+        <div class="accordino-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+            voluptate aut deleniti, vero rerum esse molestias nobis aliquam.
+            Praesentium sint iure, saepe vero laborum iusto dolorem eligendi vel
+            magnam possimus?
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordino-title">
+          <h2>How To Use JavaScript</h2>
+        </div>
+        <div class="accordino-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+            voluptate aut deleniti, vero rerum esse molestias nobis aliquam.
+            Praesentium sint iure, saepe vero laborum iusto dolorem eligendi vel
+            magnam possimus?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Java Script -->
+    <script>
+      const accordionItems = document.querySelectorAll(".accordion-item");
+
+      accordionItems.forEach((item) => {
+        const title = item.querySelector(".accordino-title");
+        const content = item.querySelector(".accordino-content");
+
+        title.addEventListener("click", () => {
+          item.classList.toggle("active");
+
+          accordionItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
